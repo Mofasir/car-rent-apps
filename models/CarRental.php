@@ -50,17 +50,17 @@ class CarRental {
         $program = $data['program'];
         $extra_hours = isset($data['extra_hours']) ? $data['extra_hours'] : 0;
 
-        // Calculate base rental cost
+        // Menghitung biaya rental
         $rental_cost = $base_price * $duration;
 
-        // Apply discount based on package
+        // Menerapkan diskon berdasarkan paket
         $discount = $this->getDiscount($program);
         
         $discounted_cost = $rental_cost * (1 - $discount);
         $extra_cost = $extra_hours * 100000;
         $total_cost = $discounted_cost + $extra_cost;
 
-        // Save to database
+        // Menyimpan ke database
         $this->saveRental($data, $base_price, $discount, $discounted_cost, $extra_cost, $total_cost);
 
         return [
@@ -111,6 +111,18 @@ class CarRental {
         } catch(PDOException $e) {
             echo "Error saving rental: " . $e->getMessage();
             return false;
+        }
+    }
+
+    public function getAllTransactions() {
+        $query = "SELECT * FROM " . $this->table_name . " ORDER BY id DESC";
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch(PDOException $e) {
+            echo "Error fetching transactions: " . $e->getMessage();
+            return [];
         }
     }
 }
