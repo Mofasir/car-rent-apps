@@ -1,7 +1,7 @@
 <?php
 function renderForm($carPrices) {
     ?>
-    <form method="POST" class="space-y-4">
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="space-y-4">
         <div>
             <label class="block mb-2">Nama Penyewa:</label>
             <input type="text" name="nama_penyewa" class="w-full border rounded p-2" required>
