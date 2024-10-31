@@ -1,4 +1,12 @@
 <?php
+/**
+ * File berisi fungsi-fungsi helper
+ * 
+ * Functions:
+ * - formatRupiah(): Memformat angka ke format mata uang Rupiah
+ * - renderResult(): Menampilkan hasil perhitungan rental
+ */
+
 function formatRupiah($amount) {
     return "Rp. " . number_format($amount, 0, ',', '.');
 }
