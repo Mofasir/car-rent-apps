@@ -1,4 +1,19 @@
 <?php
+/**
+ * Template untuk menampilkan tabel transaksi
+ * 
+ * Functions:
+ * - renderTransactions(): Menampilkan tabel dengan kolom:
+ *   - No
+ *   - Nama Penyewa
+ *   - Nama Mobil
+ *   - Program
+ *   - Biaya
+ *   - Lama Sewa
+ *   - Biaya Rental (Paket 1/2/3, Harian, Extra)
+ *   - Total Biaya
+ */
+
 function renderTransactions($transactions) {
     ?>
     <div class="overflow-x-auto">
