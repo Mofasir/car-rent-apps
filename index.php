@@ -75,5 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+    <p class="mt-6 text-center font-medium">&copy 2024 Mofasir.</p>
 </body>
 </html>
