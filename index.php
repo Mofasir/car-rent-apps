@@ -1,4 +1,17 @@
 <?php
+/**
+ * File utama aplikasi
+ * 
+ * Fungsi:
+ * - Inisialisasi session
+ * - Load semua dependencies
+ * - Setup koneksi database
+ * - Handle form submission
+ * - Render tampilan utama dengan tabs:
+ *   - Form Input Rental
+ *   - Daftar Transaksi
+ */
+
 session_start();
 require_once 'config/Database.php';
 require_once 'models/CarRental.php';
