@@ -1,4 +1,19 @@
 <?php
+/**
+ * Class Database
+ * Menangani koneksi database menggunakan PDO
+ * 
+ * Properties:
+ * - $host: hostname database
+ * - $db_name: nama database
+ * - $username: username database
+ * - $password: password database
+ * - $conn: object koneksi PDO
+ * 
+ * Methods:
+ * - getConnection(): Membuat dan mengembalikan koneksi PDO
+ */
+
 class Database {
     private $host = "localhost";
     private $db_name = "rental_mobil";
