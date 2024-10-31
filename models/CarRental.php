@@ -1,4 +1,23 @@
 <?php
+/**
+ * Class CarRental
+ * Model utama untuk mengelola logika bisnis rental mobil
+ * 
+ * Properties:
+ * - $conn: koneksi database
+ * - $table_name: nama tabel di database
+ * - $car_prices: array harga mobil
+ * 
+ * Methods:
+ * - createTable(): Membuat tabel jika belum ada
+ * - getCarPrices(): Mendapatkan daftar harga mobil
+ * - calculateRental(): Menghitung biaya rental
+ * - getBasePrice(): Mendapatkan harga dasar mobil
+ * - getDiscount(): Menghitung diskon berdasarkan paket
+ * - saveRental(): Menyimpan data rental ke database
+ * - getAllTransactions(): Mengambil semua data transaksi
+ */
+
 class CarRental {
     private $conn;
     private $table_name = "t_biaya_Rental";
