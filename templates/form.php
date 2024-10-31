@@ -1,4 +1,16 @@
 <?php
+/**
+ * Template untuk form input rental
+ * 
+ * Functions:
+ * - renderForm(): Menampilkan form input dengan fields:
+ *   - Nama Penyewa
+ *   - Pilihan Mobil
+ *   - Program Rental
+ *   - Lama Sewa
+ *   - Jam Tambahan
+ */
+
 function renderForm($carPrices) {
     ?>
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="space-y-4">
