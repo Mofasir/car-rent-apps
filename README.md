@@ -1,8 +1,8 @@
 # Sistem Rental Mobil
-Version: 1.0.0 
-Author: Mohammad Faikar Natsir 
-License: MIT 
-Last Updated: 31 Oktober 2024 
+Version: 1.0.0  
+Author: Mohammad Faikar Natsir  
+License: MIT  
+Last Updated: 31 Oktober 2024  
 
 ## Deskripsi
 Aplikasi web untuk mengelola sistem rental mobil dengan fitur perhitungan biaya sewa berdasarkan paket dan durasi. Aplikasi ini dibangun menggunakan PHP dengan arsitektur MVC sederhana.
